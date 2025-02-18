@@ -130,7 +130,7 @@ std::string parseSource(const std::string& source, ull steamID64) {
             return url;
         }
         else {
-            spdlog::critical("正则匹配失败，可能隐藏信息ID: {}", steamID64);
+            spdlog::critical("正则匹配失败，可能是ID: {}", steamID64);
             return "null";
         }
     }

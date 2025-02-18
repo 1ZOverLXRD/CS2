@@ -38,7 +38,7 @@ public:
 			}
 			if (localPlayer.playerPawn == currentPawn)continue;
 			if (player.upDate(currentPawn, currentController)) {
-				if (player.health > 0 && player.steamId!=0 && (player.team==2||player.team==3)) {
+				if (player.health > 0 && player.steamId != 0 && (player.team == 2 || player.team == 3) && (!std::string_view{player.name}.empty())) {
 					player.index = i;
 					players.push_back(player);
 				}

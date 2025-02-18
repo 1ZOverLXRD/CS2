@@ -1,5 +1,6 @@
 #include "..//Depends/OS-ImGui/OS-ImGui.h"
 module UI;
+import Aimbot;
 import Cheater;
 ImVec2 initialPosition(0.0f, 0.0f);
 ImVec2 windowSize(500.0f, 450.0f);
@@ -51,7 +52,7 @@ namespace UI {
 			ImGui::Text(fps.c_str());
 			ImGui::Text(status.c_str());
 			ImGui::Text(ecout.c_str());
-
+			
 			if (ImGui::Button("Quit")) { RUN=false; exit(0); }
 
 			ImGui::End();
@@ -93,7 +94,6 @@ namespace UI {
 			
 			ImGui::Checkbox("lockLowHp", &Status::Aimbot::locklowHp);
 			if (Status::Aimbot::locklowHp)ImGui::SliderInt("lock_minHp", &Status::Aimbot::lockMinHP, 1, 1000);
-
 			ImGui::SliderInt("smooth", &Status::Aimbot::smooth, 1,100);//平滑
 			ImGui::Checkbox("deley", &Status::Aimbot::deley);//平滑
 			ImGui::SliderFloat("random", &Status::Aimbot::randomvalue, 0, 10);

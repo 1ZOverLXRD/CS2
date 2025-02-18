@@ -16,9 +16,9 @@ void initLog() {
 	// 创建日志记录器，绑定到console_sink和file_sink
 	auto logger = std::make_shared<spdlog::logger>("logger", spdlog::sinks_init_list{ console_sink, file_sink });
 	spdlog::set_default_logger(logger);
-	spdlog::set_default_logger(logger);
 	spdlog::set_level(spdlog::level::trace); // Set global log level to debug
 	spdlog::set_pattern("[+]---[1ZOVERLXRD]---[%H:%M:%S]---[%^%L%$]---{%v}");
+	logger->flush_on(spdlog::level::trace);
 	std::cout << R"(
  __   ___________                _     __   ______________
 /  | |___  /  _  |              | |    \ \ / /| ___ \  _  \

@@ -3,6 +3,10 @@ export module Arounder;
 export import PlayerManager;
 export import Player;
 export import UI;
+
+import <chrono>;
+import <ctime>;
+
 static LocalPlayer localPlayer;
 
 static auto RED = IM_COL32(255, 0, 0, 255);
@@ -48,8 +52,18 @@ export namespace Arounder {
 
 		std::string aimMode = "AimMode:"; aimMode += UI::Status::Aimbot::aimmode_item[static_cast<int>(UI::Status::Aimbot::aimMode)];
 		
+		auto now = std::chrono::system_clock::now();
+		auto now_time_t = std::chrono::system_clock::to_time_t(now);
+
+		// 使用 C 风格的 strftime 和 localtime_s 格式化时间
+		struct tm timeinfo;
+		localtime_s(&timeinfo, &now_time_t);
+		char buffer[100];
+		std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &timeinfo);
+
 		Gui.Text(less50m.c_str(), { 980,500 }, GREEN,30.0f);	
 		Gui.Text(enmy_less50m.c_str(), { 820,500 }, RED,30.0f);
 		Gui.Text(aimMode.c_str(), {15,350}, getCycleColor(), 30.0f);
+		Gui.Text(buffer, {15,400}, getCycleColor(), 35.0f);
 	}
 }

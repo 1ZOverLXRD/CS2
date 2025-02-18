@@ -42,7 +42,7 @@ namespace Cheater {
 					std::string fileName;
 					int w;
 					int h;
-					if (!target_requests_code.contains(target.steamID64)) {
+					if (!target_requests_code.contains(target.steamID64) && !target_steamid_images.contains(target.steamID64)) {
 						if (steamAvatarer::getImage(target.steamID64, fileName)) {
 							if (target_steamid_images.get(target.steamID64) == nullptr) {
 								ID3D11ShaderResourceView* image = Gui.LoadTextureFromFile(fileName.c_str(), w, h);
@@ -60,11 +60,6 @@ namespace Cheater {
 
 				}
 			}
-			else {
-				target_steamid_images.clear();
-				target_requests_code.clear();
-			}
-			Sleep(16);
 		}
 	}
 	void mainLoop() {

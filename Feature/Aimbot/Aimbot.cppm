@@ -73,15 +73,15 @@ export{
 		}
 		void clear() {
 			std::lock_guard<std::mutex> lock(mutex_);
-            map_.clear();
+			map_.clear();
 		}
 	};
-}
+};
 export ThreadSafeMap<ull, void*>target_steamid_images;
 
 
 namespace UIHelper {
-	
+
 	static ImColor getCycleColor()
 	{
 		static float cycleValue = 0.0f;  // 保存循环状态
@@ -97,7 +97,7 @@ namespace UIHelper {
 		float red = (sin(cycleValue * 2.0f * 3.14159f) + 1.0f) / 2.0f;   // Red
 		float green = (sin((cycleValue + 0.33f) * 2.0f * 3.14159f) + 1.0f) / 2.0f; // Green
 		float blue = (sin((cycleValue + 0.66f) * 2.0f * 3.14159f) + 1.0f) / 2.0f; // Blue
-		return ImColor(red,green,blue,1.0f);
+		return ImColor(red, green, blue, 1.0f);
 	}
 	static void DrawHealthBar(ImVec2 position, ImVec2 size, int currentHealth, int maxHealth) {
 		// 确保最大血量大于0
@@ -131,22 +131,22 @@ namespace UIHelper {
 		ImVec2 pos = { center_x + UI::Status::Aimbot::radius + 50, center_y - UI::Status::Aimbot::radius * 0.8f };
 		int strlen = info.length();
 		int steplen = strlen < 7 ? 23 : 15;
-		ImVec2 size = { ((float)190+strlen* steplen),220};
+		ImVec2 size = { ((float)190 + strlen * steplen),220 };
 		ImVec2 image_size = { 184,184 };
 		ImVec2 image_pos = { pos.x + 5,pos.y + 5 };
-		DrawUtil::DrawRoundedRect({center_x+UI::Status::Aimbot::radius +50,center_y- UI::Status::Aimbot::radius*0.8f}, size, getCycleColor(), 3.0f, 1.3f);
+		DrawUtil::DrawRoundedRect({ center_x + UI::Status::Aimbot::radius + 50,center_y - UI::Status::Aimbot::radius * 0.8f }, size, getCycleColor(), 3.0f, 1.3f);
 		void* image_ptr = target_steamid_images.get(target.steamID64);
 		std::string hpinfo = "HP:" + std::to_string(target.health);
-		std::string amorinfo = "Amor:"+std::to_string(target.armor);
-		std::string disitanceinfo = "Dis:"+std::to_string((int)(target.position.distance(localPlayer.position)/10))+"m";
-		
-		
+		std::string amorinfo = "Amor:" + std::to_string(target.armor);
+		std::string disitanceinfo = "Dis:" + std::to_string((int)(target.position.distance(localPlayer.position) / 10)) + "m";
+
+
 		Gui.Text(info.c_str(), { image_pos.x + image_size.x + 20,image_pos.y }, getCycleColor(), 40.0f);
 		Gui.Text(hpinfo.c_str(), { image_pos.x + image_size.x + 20,image_pos.y + 30 }, getCycleColor(), 40.0f);
 		Gui.Text(amorinfo.c_str(), { image_pos.x + image_size.x + 20,image_pos.y + 60 }, getCycleColor(), 40.0f);
 		Gui.Text(disitanceinfo.c_str(), { image_pos.x + image_size.x + 20,image_pos.y + 90 }, getCycleColor(), 40.0f);
 		DrawHealthBar({ image_pos.x,image_pos.y + image_size.y + 5 }, { size.x - 10,20 }, target.health, target.maxHealth);
-		if (image_ptr!=nullptr) {
+		if (image_ptr != nullptr) {
 			Gui.DrawImage((ID3D11ShaderResourceView*)image_ptr, image_pos, image_size);
 		}
 	}
@@ -210,7 +210,7 @@ namespace selecter {
 		Player nearestPlayer;
 		for (const Player& player : players) {
 			auto disitance = player.position.distance(localPlayer.position);
-			if (disitance < minDistance ) {
+			if (disitance < minDistance) {
 				// 更新最小距离
 				minDistance = disitance;
 				// 更新最近的玩家
@@ -236,27 +236,27 @@ namespace selecter {
 	}
 	static Player selectMode(UI::Status::Aimbot::AIMMODE& aimMode, const std::vector<Player>& players, LocalPlayer& localPlayer) {
 		switch (aimMode) {
-			case UI::Status::Aimbot::AIMMODE::CROSSHAIR: {
-				return getPlayer_CrossHair(players, localPlayer.viewMatrix);
-				break;
-			}
-			case UI::Status::Aimbot::AIMMODE::DISITANCE: {
-				return getPlayer_Position(players, localPlayer);
-				break;
-			}
-			case UI::Status::Aimbot::AIMMODE::HP: {
-				return getPlayer_HP(players, localPlayer);
-				break;
-			}													
+		case UI::Status::Aimbot::AIMMODE::CROSSHAIR: {
+			return getPlayer_CrossHair(players, localPlayer.viewMatrix);
+			break;
+		}
+		case UI::Status::Aimbot::AIMMODE::DISITANCE: {
+			return getPlayer_Position(players, localPlayer);
+			break;
+		}
+		case UI::Status::Aimbot::AIMMODE::HP: {
+			return getPlayer_HP(players, localPlayer);
+			break;
+		}
 		}
 	}
 }
 
 export namespace Aimbot {
 	void enable(PlayerManager& pm) {
-		
+
 		UIHelper::drawAera();
-		
+
 		if (pm.players.empty())return;
 		localPlayer = pm.getLocalPlayer();
 		targets.clear();
@@ -267,7 +267,7 @@ export namespace Aimbot {
 			if (!WorldToScreen(headPosition_bone, headPos, localPlayer.viewMatrix))continue;
 			if (UI::Status::Aimbot::visiableCheck && !player.visiable)continue;
 			if (UI::Status::Aimbot::locklowHp) {
-				if (player.health < UI::Status::Aimbot::lockMinHP && player.team!= localPlayer.team) {
+				if (player.health < UI::Status::Aimbot::lockMinHP && player.team != localPlayer.team) {
 					targets.push_back(player);
 					break;
 				}
@@ -281,7 +281,7 @@ export namespace Aimbot {
 			}
 		}
 
-		target= selecter::selectMode(UI::Status::Aimbot::aimMode, targets, localPlayer);
+		target = selecter::selectMode(UI::Status::Aimbot::aimMode, targets, localPlayer);
 		Vector2 boxTopScreenPos, headbone_screenpos, bottomscreenPos{};
 		float left, right;
 		Vector3 headbone_worldPosition = ProcessUtils::rm<Vector3>(target.boneMatrix + BoneIndex::HEAD * 32);
