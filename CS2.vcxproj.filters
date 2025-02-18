@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="OVERLXRD">
+      <UniqueIdentifier>{bbf37ccd-b6a1-4da4-8816-3c9cb0e55858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Utils">
+      <UniqueIdentifier>{6fd9b67e-223f-4bf6-abe6-c827703a1473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Game">
+      <UniqueIdentifier>{299a419e-9e13-413f-9535-cbbae65dc4c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Game\Base">
+      <UniqueIdentifier>{da863750-93cc-4d29-9fdf-45372f6464ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Game\Offsets">
+      <UniqueIdentifier>{02035230-6923-4753-aba8-ba56160b4296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Utils\Json">
+      <UniqueIdentifier>{dcb1b9e4-0734-4f4e-9fab-06ed88b07ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Utils\Process">
+      <UniqueIdentifier>{bfce82f5-f74c-4a3c-b4a7-85ea9174eaf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends">
+      <UniqueIdentifier>{0d31ed2c-9604-46e6-bb24-0dcf16e5b3c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\rapidjson">
+      <UniqueIdentifier>{b723b7e7-d83a-4dd5-8fd9-f74964487bb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\OSIMGUI">
+      <UniqueIdentifier>{bedb29ae-4ccf-4f2b-b0da-1d01a9947c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\cpr">
+      <UniqueIdentifier>{c16458d6-8c2c-41b7-becb-eb2339385ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\simpleini">
+      <UniqueIdentifier>{4802f8fd-e66d-46da-8a93-b6cc8138973d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Game\Player">
+      <UniqueIdentifier>{dab28fc6-63ad-46df-8110-4141ddfb9bc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Feature">
+      <UniqueIdentifier>{3db035a4-cffb-4fca-af8c-cad84e16a8df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Feature\ESP">
+      <UniqueIdentifier>{92d51f3e-b7d8-426e-b089-d7c894378359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\UI">
+      <UniqueIdentifier>{8cb7c8f7-c6ed-47d5-90ff-11adfa5cc21e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\font">
+      <UniqueIdentifier>{83b88327-463e-4108-a1cc-e10d92b9bf84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Feature\Aimbot">
+      <UniqueIdentifier>{aae90caf-affc-4413-9654-f19c0ac0aee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Feature\ESP\Util">
+      <UniqueIdentifier>{1d32b0a4-1b18-46cd-9b6e-e8d51b923b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Utils\SteamImage">
+      <UniqueIdentifier>{f592af25-1fa2-4adc-8f47-950a9473a170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\OSIMGUI\ImGui">
+      <UniqueIdentifier>{69639fc4-217a-4e3a-99bb-14237597e54d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Depends\OSIMGUI\Minhook">
+      <UniqueIdentifier>{353c0ac9-9aaa-48b4-be15-b7b21ca5e8ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OVERLXRD\Feature\AroundWaring">
+      <UniqueIdentifier>{3427b047-5a76-4000-bec6-38c0f881b8f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Base\gBase.cpp">
+      <Filter>OVERLXRD\Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Base\gBase.cppm">
+      <Filter>OVERLXRD\Game\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Offsets\Offset.cpp">
+      <Filter>OVERLXRD\Game\Offsets</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Offsets\Offset.cppm">
+      <Filter>OVERLXRD\Game\Offsets</Filter>
+    </ClCompile>
+    <ClCompile Include="pConfig.cppm">
+      <Filter>OVERLXRD\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\simpleini\ConvertUTF.c">
+      <Filter>Depends\simpleini</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Struct.cppm">
+      <Filter>OVERLXRD\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="cheater.cpp">
+      <Filter>OVERLXRD</Filter>
+    </ClCompile>
+    <ClCompile Include="cheater.cppm">
+      <Filter>OVERLXRD</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UI.cppm">
+      <Filter>OVERLXRD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UI.CPP">
+      <Filter>OVERLXRD\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\ESP\ESP.cppm">
+      <Filter>OVERLXRD\Feature\ESP</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Hotkey.cppm">
+      <Filter>OVERLXRD\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Process\ProcessUtil.cppm">
+      <Filter>OVERLXRD\Utils\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Process\ProcessUtil.cpp">
+      <Filter>OVERLXRD\Utils\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\Aimbot\Aimbot.cppm">
+      <Filter>OVERLXRD\Feature\Aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\Module\PlayerManager.cppm">
+      <Filter>OVERLXRD\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\Module\BPlayer.cppm">
+      <Filter>OVERLXRD\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\Module\localPlayer.cppm">
+      <Filter>OVERLXRD\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\Module\Player.cppm">
+      <Filter>OVERLXRD\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\ESP\Utils\drawUtil.cppm">
+      <Filter>OVERLXRD\Feature\ESP\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\Aimbot\Trigger_bot.cppm">
+      <Filter>OVERLXRD\Feature\Aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\steamAvatarer.cpp">
+      <Filter>OVERLXRD\Utils\SteamImage</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\steamAvatarer.cppm">
+      <Filter>OVERLXRD\Utils\SteamImage</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_impl_dx11.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_impl_win32.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_tables.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_widgets.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_demo.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_draw.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_impl_dx9.cpp">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\Minhook\hde32.c">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\Minhook\hde64.c">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\Minhook\hook.c">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\Minhook\trampoline.c">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\Minhook\buffer.c">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui.cpp">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui_Base.cpp">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui_External.cpp">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui_Internal.cpp">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\AroundWarning\Arounder.cppm">
+      <Filter>OVERLXRD\Feature\AroundWaring</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Json\json.hpp">
+      <Filter>OVERLXRD\Utils\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\error\en.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\error\error.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\biginteger.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\clzll.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\diyfp.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\dtoa.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\ieee754.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\itoa.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\meta.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\pow10.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\regex.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\stack.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\strfunc.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\strtod.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\internal\swap.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\msinttypes\inttypes.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\msinttypes\stdint.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\allocators.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\cursorstreamwrapper.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\document.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\encodedstream.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\encodings.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\filereadstream.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\filewritestream.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\fwd.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\istreamwrapper.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\memorybuffer.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\memorystream.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\ostreamwrapper.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\pointer.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\prettywriter.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\rapidjson.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\reader.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\schema.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\stream.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\stringbuffer.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\uri.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\rapidjson\writer.h">
+      <Filter>Depends\rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\async.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\auth.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\bearer.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\body.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\buffer.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\callback.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\cert_info.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\connect_timeout.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\cookies.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\cpr.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\cprtypes.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\curl_container.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\curlholder.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\error.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\file.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\http_version.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\interceptor.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\interface.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\limit_rate.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\local_port.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\local_port_range.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\low_speed.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\multipart.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\parameters.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\payload.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\proxies.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\proxyauth.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\range.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\redirect.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\reserve_size.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\response.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\session.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\singleton.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\ssl_ctx.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\ssl_options.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\status_codes.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\threadpool.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\timeout.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\unix_socket.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\user_agent.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\util.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\verbose.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\accept_encoding.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\cpr\api.h">
+      <Filter>Depends\cpr</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\simpleini\ConvertUTF.h">
+      <Filter>Depends\simpleini</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\simpleini\SimpleIni.h">
+      <Filter>Depends\simpleini</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Font\SourceHanSansCN-Light.h">
+      <Filter>OVERLXRD\font</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_impl_dx9.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_impl_dx11.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_impl_win32.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_internal.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imstb_rectpack.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imstb_textedit.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imstb_truetype.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imconfig.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui.h">
+      <Filter>Depends\OSIMGUI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\hde32.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\hde64.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\MinHook.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\pstdint.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\table32.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\table64.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\trampoline.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\Minhook\buffer.h">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui.h">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Base.h">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Exception.hpp">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_External.h">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Internal.h">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Struct.h">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Depends\OS-ImGui\stb_image.h">
+      <Filter>Depends\OSIMGUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Depends\OS-ImGui\Minhook\MinHook.def">
+      <Filter>Depends\OSIMGUI\Minhook</Filter>
+    </None>
+  </ItemGroup>
+</Project>

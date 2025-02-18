@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a310aadd-0452-4c73-bfa5-4bbc63387744}</ProjectGuid>
+    <RootNamespace>CS2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>1ZOVERLXRD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>1ZOVERLXRD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>crypt32.lib;ws2_32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>crypt32.lib;ws2_32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cheater.cpp" />
+    <ClCompile Include="cheater.cppm" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\Minhook\buffer.c" />
+    <ClCompile Include="Depends\OS-ImGui\Minhook\hde32.c" />
+    <ClCompile Include="Depends\OS-ImGui\Minhook\hde64.c" />
+    <ClCompile Include="Depends\OS-ImGui\Minhook\hook.c" />
+    <ClCompile Include="Depends\OS-ImGui\Minhook\trampoline.c" />
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui_Base.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui_External.cpp" />
+    <ClCompile Include="Depends\OS-ImGui\OS-ImGui_Internal.cpp" />
+    <ClCompile Include="Depends\simpleini\ConvertUTF.c" />
+    <ClCompile Include="Feature\Aimbot\Aimbot.cppm" />
+    <ClCompile Include="Feature\Aimbot\Trigger_bot.cppm" />
+    <ClCompile Include="Feature\AroundWarning\Arounder.cppm" />
+    <ClCompile Include="Feature\ESP\ESP.cppm" />
+    <ClCompile Include="Feature\ESP\Utils\drawUtil.cppm" />
+    <ClCompile Include="Game\Base\gBase.cpp" />
+    <ClCompile Include="Game\Base\gBase.cppm" />
+    <ClCompile Include="Game\Offsets\Offset.cpp" />
+    <ClCompile Include="Game\Offsets\Offset.cppm" />
+    <ClCompile Include="Game\Player\Module\BPlayer.cppm" />
+    <ClCompile Include="Game\Player\Module\localPlayer.cppm" />
+    <ClCompile Include="Game\Player\Module\Player.cppm" />
+    <ClCompile Include="Game\Player\Module\PlayerManager.cppm" />
+    <ClCompile Include="Game\Struct.cppm" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pConfig.cppm" />
+    <ClCompile Include="UI\UI.CPP" />
+    <ClCompile Include="UI\UI.cppm" />
+    <ClCompile Include="Utils\Hotkey.cppm" />
+    <ClCompile Include="Utils\Process\ProcessUtil.cpp" />
+    <ClCompile Include="Utils\Process\ProcessUtil.cppm" />
+    <ClCompile Include="Utils\steamAvatarer.cpp" />
+    <ClCompile Include="Utils\steamAvatarer.cppm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Depends\cpr\accept_encoding.h" />
+    <ClInclude Include="Depends\cpr\api.h" />
+    <ClInclude Include="Depends\cpr\async.h" />
+    <ClInclude Include="Depends\cpr\auth.h" />
+    <ClInclude Include="Depends\cpr\bearer.h" />
+    <ClInclude Include="Depends\cpr\body.h" />
+    <ClInclude Include="Depends\cpr\buffer.h" />
+    <ClInclude Include="Depends\cpr\callback.h" />
+    <ClInclude Include="Depends\cpr\cert_info.h" />
+    <ClInclude Include="Depends\cpr\connect_timeout.h" />
+    <ClInclude Include="Depends\cpr\cookies.h" />
+    <ClInclude Include="Depends\cpr\cpr.h" />
+    <ClInclude Include="Depends\cpr\cprtypes.h" />
+    <ClInclude Include="Depends\cpr\curlholder.h" />
+    <ClInclude Include="Depends\cpr\curl_container.h" />
+    <ClInclude Include="Depends\cpr\error.h" />
+    <ClInclude Include="Depends\cpr\file.h" />
+    <ClInclude Include="Depends\cpr\http_version.h" />
+    <ClInclude Include="Depends\cpr\interceptor.h" />
+    <ClInclude Include="Depends\cpr\interface.h" />
+    <ClInclude Include="Depends\cpr\limit_rate.h" />
+    <ClInclude Include="Depends\cpr\local_port.h" />
+    <ClInclude Include="Depends\cpr\local_port_range.h" />
+    <ClInclude Include="Depends\cpr\low_speed.h" />
+    <ClInclude Include="Depends\cpr\multipart.h" />
+    <ClInclude Include="Depends\cpr\parameters.h" />
+    <ClInclude Include="Depends\cpr\payload.h" />
+    <ClInclude Include="Depends\cpr\proxies.h" />
+    <ClInclude Include="Depends\cpr\proxyauth.h" />
+    <ClInclude Include="Depends\cpr\range.h" />
+    <ClInclude Include="Depends\cpr\redirect.h" />
+    <ClInclude Include="Depends\cpr\reserve_size.h" />
+    <ClInclude Include="Depends\cpr\response.h" />
+    <ClInclude Include="Depends\cpr\session.h" />
+    <ClInclude Include="Depends\cpr\singleton.h" />
+    <ClInclude Include="Depends\cpr\ssl_ctx.h" />
+    <ClInclude Include="Depends\cpr\ssl_options.h" />
+    <ClInclude Include="Depends\cpr\status_codes.h" />
+    <ClInclude Include="Depends\cpr\threadpool.h" />
+    <ClInclude Include="Depends\cpr\timeout.h" />
+    <ClInclude Include="Depends\cpr\unix_socket.h" />
+    <ClInclude Include="Depends\cpr\user_agent.h" />
+    <ClInclude Include="Depends\cpr\util.h" />
+    <ClInclude Include="Depends\cpr\verbose.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imconfig.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imgui_internal.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imstb_textedit.h" />
+    <ClInclude Include="Depends\OS-ImGui\imgui\imstb_truetype.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\buffer.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\hde32.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\hde64.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\MinHook.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\pstdint.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\table32.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\table64.h" />
+    <ClInclude Include="Depends\OS-ImGui\Minhook\trampoline.h" />
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui.h" />
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Base.h" />
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Exception.hpp" />
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_External.h" />
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Internal.h" />
+    <ClInclude Include="Depends\OS-ImGui\OS-ImGui_Struct.h" />
+    <ClInclude Include="Depends\OS-ImGui\stb_image.h" />
+    <ClInclude Include="Depends\rapidjson\allocators.h" />
+    <ClInclude Include="Depends\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="Depends\rapidjson\document.h" />
+    <ClInclude Include="Depends\rapidjson\encodedstream.h" />
+    <ClInclude Include="Depends\rapidjson\encodings.h" />
+    <ClInclude Include="Depends\rapidjson\error\en.h" />
+    <ClInclude Include="Depends\rapidjson\error\error.h" />
+    <ClInclude Include="Depends\rapidjson\filereadstream.h" />
+    <ClInclude Include="Depends\rapidjson\filewritestream.h" />
+    <ClInclude Include="Depends\rapidjson\fwd.h" />
+    <ClInclude Include="Depends\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="Depends\rapidjson\internal\clzll.h" />
+    <ClInclude Include="Depends\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="Depends\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="Depends\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="Depends\rapidjson\internal\itoa.h" />
+    <ClInclude Include="Depends\rapidjson\internal\meta.h" />
+    <ClInclude Include="Depends\rapidjson\internal\pow10.h" />
+    <ClInclude Include="Depends\rapidjson\internal\regex.h" />
+    <ClInclude Include="Depends\rapidjson\internal\stack.h" />
+    <ClInclude Include="Depends\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="Depends\rapidjson\internal\strtod.h" />
+    <ClInclude Include="Depends\rapidjson\internal\swap.h" />
+    <ClInclude Include="Depends\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="Depends\rapidjson\memorybuffer.h" />
+    <ClInclude Include="Depends\rapidjson\memorystream.h" />
+    <ClInclude Include="Depends\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="Depends\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="Depends\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="Depends\rapidjson\pointer.h" />
+    <ClInclude Include="Depends\rapidjson\prettywriter.h" />
+    <ClInclude Include="Depends\rapidjson\rapidjson.h" />
+    <ClInclude Include="Depends\rapidjson\reader.h" />
+    <ClInclude Include="Depends\rapidjson\schema.h" />
+    <ClInclude Include="Depends\rapidjson\stream.h" />
+    <ClInclude Include="Depends\rapidjson\stringbuffer.h" />
+    <ClInclude Include="Depends\rapidjson\uri.h" />
+    <ClInclude Include="Depends\rapidjson\writer.h" />
+    <ClInclude Include="Depends\simpleini\ConvertUTF.h" />
+    <ClInclude Include="Depends\simpleini\SimpleIni.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="UI\Font\SourceHanSansCN-Light.h" />
+    <ClInclude Include="Utils\Json\json.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Depends\OS-ImGui\Minhook\MinHook.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
