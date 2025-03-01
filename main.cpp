@@ -37,7 +37,6 @@ int main() {
 	auto result = Offsets::initOffset();//初始化偏移
 	initBase();//初始化dll的基址
 	Gui.AttachAnotherWindow(ProcessUtils::GetProcessIdByName("cs2.exe"), Cheater::mainLoop,Cheater::logicThread,(void*)front_data_data, (int)front_data_size);
-	//Gui.AttachAnotherWindow(ProcessUtils::GetProcessIdByName("cs2.exe"), Cheater::mainLoop,(void*)front_data_data, (int)front_data_size);
 
 	return 0;
 }

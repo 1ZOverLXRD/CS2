@@ -23,17 +23,6 @@ namespace UI {
 		Hotkey::bindHotkey_press(VK_PRIOR, []() {UI::Status::Aimbot::radius =600; });//UP
 		Hotkey::bindHotkey_press(VK_NEXT, []() {UI::Status::Aimbot::radius -= 160; });//UP
 		Hotkey::bindHotkey_relase(Hotkey::keys::AIMBOT_STARTAIM, []() {UI::Status::Aimbot::lock = !UI::Status::Aimbot::lock; });
-		//Hotkey::bindHotkey_relase(Hotkey::keys::AIMBOT_LOCK, []() {
-		//	if (UI::Status::Aimbot::lock) {
-		//		// 锁定目标
-		//		lockedTarget = target;  // 将当前目标作为锁定目标
-		//	}
-		//	else {
-		//		// 解除锁定目标
-		//		lockedTarget = Player();  // 清除锁定目标
-		//	}
-		//	//UI::Status::Aimbot::lock = !UI::Status::Aimbot::lock;
-		//	});
 		Hotkey::Update();
 	}
 	void drawMenu() {
@@ -47,14 +36,13 @@ namespace UI {
 			ImGui::Begin("1ZOVERLXRD", &Status::MENU_OPEN);
 
 			ImGui::Checkbox("updatePlayer", &UI::Status::upDate);
-			ImGui::SameLine();
-			ImGui::SliderFloat("thickness", &UI::Status::ESP::thikness, 0, 5);
 			ImGui::NextColumn();
 			if (UI::Status::upDate) {
 				///绘制功能tabBar
 				if (ImGui::BeginTabBar("Modules")) {
 					drawESP();
 					drawAimbot();
+					drawRadar();
 				}
 				ImGui::EndTabBar();
 			}
@@ -109,6 +97,13 @@ namespace UI {
 			ImGui::Checkbox("deley", &Status::Aimbot::deley);//平滑
 			ImGui::SliderFloat("random", &Status::Aimbot::randomvalue, 0, 10);
 			ImGui::SliderFloat("Radius[pgup-pgdown]", &Status::Aimbot::radius, 0, 600);
+			ImGui::EndTabItem();
+		}
+	}
+	void drawRadar() {
+		if (ImGui::BeginTabItem("Radar Settings"))
+		{
+			ImGui::Checkbox("enble", &Status::Radar::enable);
 			ImGui::EndTabItem();
 		}
 	}

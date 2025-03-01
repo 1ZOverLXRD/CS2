@@ -58,7 +58,7 @@ public:
 		maxHealth = ProcessUtils::rm<int>(currentPawn + Offsets::Client::m_iMaxHealth);
 		armor = ProcessUtils::rm<int>(currentPawn + Offsets::Client::m_ArmorValue);
 		position = ProcessUtils::rm<Vector3>(currentPawn + Offsets::Client::m_vOldOrigin);
-
+		viewAngle = ProcessUtils::rm<Vector2>(currentPawn + Offsets::Client::m_angEyeAngles);
 		//BoneMatrix
 		uintptr_t node = ProcessUtils::rm<uintptr_t>(currentPawn + Offsets::Client::m_pGameSceneNode); assert_addres(node); // m_pGameSceneNode
 		boneMatrix = ProcessUtils::rm<uintptr_t>(node + 0x1F0); // m_groundNormal
@@ -71,6 +71,7 @@ public:
 		return true;
 	}
 	bool upDate(uintptr_t currentPawn) {
+		viewAngle = ProcessUtils::rm<Vector2>(currentPawn + Offsets::Client::m_angEyeAngles);
 		team = ProcessUtils::rm<int>(currentPawn + Offsets::Client::m_iTeamNum);
 		health = ProcessUtils::rm<int>(currentPawn + Offsets::Client::m_iHealth);
 		maxHealth = ProcessUtils::rm<int>(currentPawn + Offsets::Client::m_iMaxHealth);

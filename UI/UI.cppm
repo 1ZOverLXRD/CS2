@@ -6,7 +6,9 @@ export namespace UI {
 		int E_COUT = 0;//敌人数量
 		bool status = true;//运行状态
 		bool upDate = true;//刷新数据
-
+		export namespace Radar {
+			bool enable = false;
+		}
 		export namespace ESP {
 			bool enable = false;
 			
@@ -52,4 +54,5 @@ export namespace UI {
 	void drawMenu();
 	void drawESP();
 	void drawAimbot();
+	void drawRadar();
 }

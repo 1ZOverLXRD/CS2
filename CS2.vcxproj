@@ -178,6 +178,8 @@
     <ClCompile Include="Feature\AroundWarning\Arounder.cppm" />
     <ClCompile Include="Feature\ESP\ESP.cppm" />
     <ClCompile Include="Feature\ESP\Utils\drawUtil.cppm" />
+    <ClCompile Include="Feature\Radar\Radar.cppm" />
+    <ClCompile Include="Feature\Radar\Rader.cpp" />
     <ClCompile Include="Game\Base\gBase.cpp" />
     <ClCompile Include="Game\Base\gBase.cppm" />
     <ClCompile Include="Game\Offsets\Offset.cpp" />

@@ -7,6 +7,7 @@ import Aimbot;
 import Triggerbot;
 import steamAvatarer;
 import Arounder;
+import Radar;
 static PlayerManager pm = PlayerManager();
 ThreadSafeMap<ull, bool> target_requests_code;
 namespace Cheater {
@@ -23,6 +24,9 @@ namespace Cheater {
 					}
 					if (UI::Status::Aimbot::enable) {
 						Aimbot::enable(pm);
+					}
+					if (UI::Status::Radar::enable) {
+						Radar::enable(pm);
 					}
 					UI::Status::E_COUT = pm.players.size();
 					UI::Status::status = true;

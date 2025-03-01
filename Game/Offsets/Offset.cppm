@@ -11,7 +11,8 @@ export enum OFFSET_CODE {
 export namespace Offsets {
 	export bool initOffset();
 	export namespace Client {
-		constexpr int bSpottedByMask = 0x23D0+0xC; ///entitySpottedState + bSpottedByMask
+		int m_angEyeAngles = 0x1438; ///C_CSPlayerPawnBase
+		constexpr int bSpottedByMask = 0X23D0+0xC; ///entitySpottedState + bSpottedByMask
 		int m_iMaxHealth = 0x340;
 		int m_iTeamNum = 0x3E3; // uint8
 		int m_iHealth = 0x344; // int32

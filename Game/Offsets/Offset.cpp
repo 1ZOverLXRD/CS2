@@ -193,6 +193,7 @@ namespace Offsets {
 		auto json_content = FileHelper::readFile(CLIENTDLL_JSON_FILENAME);
 		int result;
 		if (JsonHelper::parseJsonAndFindInt(json_content, "m_iTeamNum", result)) Client::m_iTeamNum = result;
+		if (JsonHelper::parseJsonAndFindInt(json_content, "m_angEyeAngles", result)) Client::m_angEyeAngles = result;
 		if (JsonHelper::parseJsonAndFindInt(json_content, "m_iMaxHealth", result)) Client::m_iMaxHealth = result;
 		if (JsonHelper::parseJsonAndFindInt(json_content, "m_steamID", result)) Client::m_steamID = result;
 		if (JsonHelper::parseJsonAndFindInt(json_content, "m_iHealth", result)) Client::m_iHealth = result;
@@ -248,6 +249,7 @@ namespace Offsets {
 		}
 
 		const auto& offset_clientDll = document["client.dll"];
+		
 		Offsets::ooffsseett::dwEntityList = offset_clientDll["dwEntityList"].GetInt64();
 		Offsets::ooffsseett::dwLocalPlayerPawn = offset_clientDll["dwLocalPlayerPawn"].GetInt64();
 		Offsets::ooffsseett::dwLocalPlayerController = offset_clientDll["dwLocalPlayerController"].GetInt64();

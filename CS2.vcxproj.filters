@@ -82,6 +82,9 @@
     <Filter Include="OVERLXRD\Feature\AroundWaring">
       <UniqueIdentifier>{3427b047-5a76-4000-bec6-38c0f881b8f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OVERLXRD\Feature\Radar">
+      <UniqueIdentifier>{eb79e7c2-b485-4784-8e16-3dcfb0794c0d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -212,6 +215,12 @@
     </ClCompile>
     <ClCompile Include="Feature\AroundWarning\Arounder.cppm">
       <Filter>OVERLXRD\Feature\AroundWaring</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\Radar\Radar.cppm">
+      <Filter>OVERLXRD\Feature\Radar</Filter>
+    </ClCompile>
+    <ClCompile Include="Feature\Radar\Rader.cpp">
+      <Filter>OVERLXRD\Feature\Radar</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

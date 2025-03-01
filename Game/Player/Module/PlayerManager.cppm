@@ -38,7 +38,14 @@ public:
 			}
 			if (localPlayer.playerPawn == currentPawn)continue;
 			if (player.upDate(currentPawn, currentController)) {
+				/*
+				TODO
 				if (player.health > 0 && player.steamId != 0 && (player.team == 2 || player.team == 3) && (!std::string_view{player.name}.empty())) {
+					player.index = i;
+					players.push_back(player);
+				}
+				*/
+				if (player.health > 0  && (player.team == 2 || player.team == 3) && (!std::string_view{player.name}.empty())) {
 					player.index = i;
 					players.push_back(player);
 				}

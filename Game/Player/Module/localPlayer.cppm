@@ -12,7 +12,6 @@ public:
 	bool upDate() {
 
 		
-
 		viewMatrix = ProcessUtils::rm<view_matrix_t>(clientDll + Offsets::ooffsseett::dwViewMatrix);
 		playerPawn = ProcessUtils::rm<uintptr_t>(clientDll + Offsets::ooffsseett::dwLocalPlayerPawn); assert_addres(playerPawn);
 		playerController = ProcessUtils::rm<uintptr_t>(clientDll + Offsets::ooffsseett::dwLocalPlayerController); assert_addres(playerController);
@@ -25,6 +24,7 @@ public:
 		maxHealth = ProcessUtils::rm<int>(playerPawn + Offsets::Client::m_iMaxHealth);
 
 		armor = ProcessUtils::rm<int>(playerPawn + Offsets::Client::m_ArmorValue);
+		viewAngle = ProcessUtils::rm<Vector2>(playerPawn + Offsets::Client::m_angEyeAngles);
 		ProcessUtils::readArray<char>(nameAddress, name, sizeof(name)); // Name TODO
 		velocity = ProcessUtils::rm<Vector3>(playerPawn + Offsets::Client::m_vecAbsVelocity);
 		position = ProcessUtils::rm<Vector3>(playerPawn + Offsets::Client::m_vOldOrigin);

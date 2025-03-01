@@ -25,6 +25,7 @@ public:
 	int armor;
 	char name[128] = { 0 };
 	float sensitivity;
+	Vector2 viewAngle;
 	Vector3 velocity;
 	Vector3 position;
 };
