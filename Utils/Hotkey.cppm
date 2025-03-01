@@ -10,7 +10,8 @@ export namespace Hotkey {
 		int UPDATE = VK_F1;;
 		int ESP = VK_F2;
 		int AIMBOT = VK_F3;
-		int AIMBOT_LOCK = VK_LMENU;
+		int AIMBOT_STARTAIM = VK_LMENU;
+		int AIMBOT_LOCK = VK_CONTROL;
 	}
 	void bindHotkey(int VKKEY, std::function<void()> function) {
 		if (GetAsyncKeyState(VKKEY) & 1) {

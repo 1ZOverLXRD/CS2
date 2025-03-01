@@ -22,7 +22,18 @@ namespace UI {
 		Hotkey::bindHotkey_press(VK_XBUTTON1, []() {UI::Status::Aimbot::radius -= 40.0f; });//UP
 		Hotkey::bindHotkey_press(VK_PRIOR, []() {UI::Status::Aimbot::radius =600; });//UP
 		Hotkey::bindHotkey_press(VK_NEXT, []() {UI::Status::Aimbot::radius -= 160; });//UP
-		Hotkey::bindHotkey_relase(Hotkey::keys::AIMBOT_LOCK, []() {UI::Status::Aimbot::lock = !UI::Status::Aimbot::lock; });
+		Hotkey::bindHotkey_relase(Hotkey::keys::AIMBOT_STARTAIM, []() {UI::Status::Aimbot::lock = !UI::Status::Aimbot::lock; });
+		//Hotkey::bindHotkey_relase(Hotkey::keys::AIMBOT_LOCK, []() {
+		//	if (UI::Status::Aimbot::lock) {
+		//		// 锁定目标
+		//		lockedTarget = target;  // 将当前目标作为锁定目标
+		//	}
+		//	else {
+		//		// 解除锁定目标
+		//		lockedTarget = Player();  // 清除锁定目标
+		//	}
+		//	//UI::Status::Aimbot::lock = !UI::Status::Aimbot::lock;
+		//	});
 		Hotkey::Update();
 	}
 	void drawMenu() {

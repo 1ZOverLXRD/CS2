@@ -25,8 +25,8 @@ static const float center_x = GetSystemMetrics(SM_CXSCREEN) / 2;
 static const float center_y = GetSystemMetrics(SM_CYSCREEN) / 2;
 
 std::mutex mtx;
-
-export Player target;
+export Player lockedTarget;  // 当前锁定的目标
+export Player target;// 当前目标
 export import DrawUtil;
 export import <iostream>;
 static LocalPlayer localPlayer;
@@ -260,7 +260,6 @@ export namespace Aimbot {
 		if (pm.players.empty())return;
 		localPlayer = pm.getLocalPlayer();
 		targets.clear();
-
 		///获取一个合适的玩家
 		for (Player player : pm.players) {
 			Vector2 headPos{}; Vector3 headPosition_bone = ProcessUtils::rm<Vector3>(player.boneMatrix + BoneIndex::HEAD * 32);
@@ -280,7 +279,6 @@ export namespace Aimbot {
 				}
 			}
 		}
-
 		target = selecter::selectMode(UI::Status::Aimbot::aimMode, targets, localPlayer);
 		Vector2 boxTopScreenPos, headbone_screenpos, bottomscreenPos{};
 		float left, right;
